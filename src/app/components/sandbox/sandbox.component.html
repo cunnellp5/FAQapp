@@ -1,22 +1,9 @@
-<h1> Hello World</h1>
-<!-- clicks! -->
-
-<button id='btn' (click)="fireEvent($event)"> Click Event !</button>
-<br>
-<br>
-<button (mouseover)="fireEvent($event)">Mouseover!</button>
-<br>
-<br>
-<button (mousedown)="fireEvent($event)">MouseDown</button>
-<br>
-<br>
-<button (mouseup)="fireEvent($event)">Mouseup</button>
-<br>
-<br>
-<button (dblclick)="fireEvent($event)">dblClick</button>
-<br>
-<br>
-<button (drag)="fireEvent($event)">drag event</button>
-<br>
-<br>
-<button (dragover)="fireEvent($event)">dragover event</button>
+<h1>SandBox:</h1>
+<!-- changing component prop thru events -->
+<div *ngIf="value">
+  <h1> {{ text }}</h1>
+</div>
+<div *ngIf="!value">
+  <h1> {{ poo }}</h1>
+</div>
+<button (click)="changeValue()">Click Value</button>
