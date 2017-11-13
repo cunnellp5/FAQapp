@@ -1,0 +1,13 @@
+<h1>ello world</h1>
+
+<ul>
+  <li class="special" *ngFor='let person of people'>{{ person }}</li>
+</ul>
+
+<ul>
+  <li class="special" *ngFor='let person of people; let i = index'>{{ i + 1 }}{{ person }}</li>
+</ul>
+
+<ul>
+  <li class="special" *ngFor='let person of people2'>{{ person.firstName }} {{ person.lastName }}</li>
+</ul>
