@@ -1,61 +1,31 @@
-<h1>SandBox:</h1>
-<!-- keyboard events -->
-<div>
-  <input
-    type="text"
-    placeholder="keyup"
-    (keyup)="fireEvent($event)">
+<h1 style="text-align:center">SandBox:</h1>
+<!-- ngmodule! -->
+<div class="container">
+  <form>
+      <div class="form-group">
+        <label> Name </label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="name"
+          name="name">
+      </div>
+      <div class="form-group">
+        <label> Age </label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="age"
+          name="age">
+      </div>
+      <div class="form-group">
+        <input
+          type="submit"
+          value="submit"
+          class="btn btn-success">
+      </div>
+  </form>
+
+  <h4>Name: {{ name }}</h4>
+  <h4>Age: {{ age }}</h4>
 </div>
-<br>
-<div>
-  <input
-    type="text"
-    placeholder="keydurn"
-    (keydown)="fireEvent($event)">
-</div>
-<br>
-<div>
-  <input
-    type="text"
-    placeholder="focus"
-    (focus)="fireEvent($event)">
-</div>
-<br>
-<div>
-  <input
-    type="text"
-    placeholder="blur"
-    (blur)="fireEvent($event)">
-</div>
-<br>
-<div>
-  <input
-    type="text"
-    placeholder="cut"
-    (cut)="fireEvent($event)">
-</div>
-<br>
-<div>
-  <input
-    type="text"
-    placeholder="copy"
-    (copy)="fireEvent($event)">
-</div>
-<br>
-<div>
-  <input
-    type="text"
-    placeholder="paste"
-    (paste)="fireEvent($event)">
-</div>
-<br>
-<hr>
-<br>
-<div>
-  <input
-    type="text"
-    placeholder="changetexticle"
-    (keyup)="changeText($event)"
-    value="{{ text }}">
-</div>
-<h2>{{ text }}</h2>

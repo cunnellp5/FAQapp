@@ -7,14 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class SandboxComponent {
-  text: string = 'Hello, its me';
-
-
-  fireEvent(e){
-    console.log(e.type)
-  }
-
-  changeText(e) {
-    this.text = e.target.value
-  }
+  name: string = '';
+  age: number = 0;
 }
