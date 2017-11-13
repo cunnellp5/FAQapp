@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
 })
 
 export class SandboxComponent {
-  imageUrl: string = 'http://lorempixel.com/400/200';
-  isUnchanged: boolean = false;
+  isSpecial: boolean = true;
+  canSave: boolean = true;
+  currentClasses: string{} = {};
+
+  constructor() {
+    this.setCurrentClasses();
+  }
+
+  setCurrentClasses() {
+    this.currentClasses = {
+      savable: this.canSave,
+      special: this.isSpecial
+    }
+  }
 }
