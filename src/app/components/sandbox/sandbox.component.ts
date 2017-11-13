@@ -7,12 +7,14 @@ import { Component } from '@angular/core';
 })
 
 export class SandboxComponent {
-  text: string = 'Hello World';
-  poo: string = 'poo';
-  value: boolean = true;
+  text: string = 'Hello, its me';
 
-  changeValue() {
-    // this.value = false;
-    this.value = !this.value;
+
+  fireEvent(e){
+    console.log(e.type)
+  }
+
+  changeText(e) {
+    this.text = e.target.value
   }
 }
