@@ -7,18 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class SandboxComponent {
-  isSpecial: boolean = true;
-  canSave: boolean = false;
-  currentStyles: string{} = {};
-
-  constructor() {
-    this.setCurrentStyles();
-  }
-
-  setCurrentStyles(){
-    this.currentStyles = {
-      'font-style': this.canSave ? 'italic' : 'normal',
-      'font-size': this.isSpecial ? '24px' : '12px'
-    }
-  }
+  birthday = new Date(1989, 7, 15);
+  total: number = 500;
+  fee: number = 0.7329;
 }

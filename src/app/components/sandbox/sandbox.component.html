@@ -1,9 +1,10 @@
 <h1> Hello World</h1>
-<!-- 3 ways to bind properties! -->
-<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
-  font Size depends on isSpecial
-</div>
-
-<div [ngStyle]="currentStyles">
-  this div is initially saveable and speical
-</div>
+<!-- PIPES -->
+<p>My Birthday is {{ birthday | date | uppercase }}</p>
+<p>My Birthday is {{ birthday | date: "MM-dd-yyyy" }}</p>
+<p>I was born in {{ birthday | date: "yyyy" }}</p>
+<p>I love {{ 'cake' | uppercase }}</p>
+<p>I hate {{ 'POOP' | lowercase }}</p>
+<hr>
+<p> your total is {{ total | currency }}</p>
+<p> our fee is {{ fee | percent:'2.2' }}</p>
