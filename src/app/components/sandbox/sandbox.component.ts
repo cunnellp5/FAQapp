@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class SandboxComponent {
-  name: string = 'john dildoe';
-  showName: boolean = true;
-  greeting: number = 1;
+  imageUrl: string = 'http://lorempixel.com/400/200';
+  isUnchanged: boolean = false;
 }

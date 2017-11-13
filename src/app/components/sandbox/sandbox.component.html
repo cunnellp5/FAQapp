@@ -1,33 +1,13 @@
-<h1>ello
+<h1> Hello World</h1>
+<!-- 3 ways to bind properties! -->
+<div> <img src="{{ imageUrl }}" alt="curleys"> </div>
+<div> <img [src]="imageUrl" alt="brackets"> </div>
+<div> <img bind-src="imageUrl" alt="bind"> </div>
 
-  <!-- <span *ngIf="showName">
-    {{ name }}
-  </span>
-  <span *ngIf="!showName">
-    😂🤙
-  </span>
-   -->
+<h4>Image Location: <span [textContent] = "imageUrl"></span></h4>
 
-   <!-- <span *ngIf="showName; else noName">
-     {{ name }}
-   </span>
+<hr>
 
-   <ng-template #noName>worlsds</ng-template> -->
-
-   <p> hello {{ showName ? name : 'worldilocks' }}</p>
-   <hr>
-   <div [ngSwitch]="greeting">
-     <div *ngSwitchCase = "'1'">
-       hello world
-     </div>
-     <div *ngSwitchCase = "'2'">
-       hi there
-     </div>
-     <div *ngSwitchCase = "'3'">
-       go 💩 your self
-     </div>
-     <div *ngSwitchDefault>
-       fuh gettabou it
-     </div>
-   </div>
-</h1>
+<h2>Create Post</h2>
+<p [hidden]="isUnchanged">Post has been changed, please save</p>
+<button [disabled]="isUnchanged">Save</button>
