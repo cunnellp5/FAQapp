@@ -1,10 +1,22 @@
 <h1> Hello World</h1>
-<!-- PIPES -->
-<p>My Birthday is {{ birthday | date | uppercase }}</p>
-<p>My Birthday is {{ birthday | date: "MM-dd-yyyy" }}</p>
-<p>I was born in {{ birthday | date: "yyyy" }}</p>
-<p>I love {{ 'cake' | uppercase }}</p>
-<p>I hate {{ 'POOP' | lowercase }}</p>
-<hr>
-<p> your total is {{ total | currency }}</p>
-<p> our fee is {{ fee | percent:'2.2' }}</p>
+<!-- clicks! -->
+
+<button id='btn' (click)="fireEvent($event)"> Click Event !</button>
+<br>
+<br>
+<button (mouseover)="fireEvent($event)">Mouseover!</button>
+<br>
+<br>
+<button (mousedown)="fireEvent($event)">MouseDown</button>
+<br>
+<br>
+<button (mouseup)="fireEvent($event)">Mouseup</button>
+<br>
+<br>
+<button (dblclick)="fireEvent($event)">dblClick</button>
+<br>
+<br>
+<button (drag)="fireEvent($event)">drag event</button>
+<br>
+<br>
+<button (dragover)="fireEvent($event)">dragover event</button>
