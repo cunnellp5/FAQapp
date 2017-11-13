@@ -1,13 +1,33 @@
-<h1>ello world</h1>
+<h1>ello
 
-<ul>
-  <li class="special" *ngFor='let person of people'>{{ person }}</li>
-</ul>
+  <!-- <span *ngIf="showName">
+    {{ name }}
+  </span>
+  <span *ngIf="!showName">
+    😂🤙
+  </span>
+   -->
 
-<ul>
-  <li class="special" *ngFor='let person of people; let i = index'>{{ i + 1 }}{{ person }}</li>
-</ul>
+   <!-- <span *ngIf="showName; else noName">
+     {{ name }}
+   </span>
 
-<ul>
-  <li class="special" *ngFor='let person of people2'>{{ person.firstName }} {{ person.lastName }}</li>
-</ul>
+   <ng-template #noName>worlsds</ng-template> -->
+
+   <p> hello {{ showName ? name : 'worldilocks' }}</p>
+   <hr>
+   <div [ngSwitch]="greeting">
+     <div *ngSwitchCase = "'1'">
+       hello world
+     </div>
+     <div *ngSwitchCase = "'2'">
+       hi there
+     </div>
+     <div *ngSwitchCase = "'3'">
+       go 💩 your self
+     </div>
+     <div *ngSwitchDefault>
+       fuh gettabou it
+     </div>
+   </div>
+</h1>
