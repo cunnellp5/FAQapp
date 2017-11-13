@@ -1,4 +1,9 @@
 <h1> Hello World</h1>
 <!-- 3 ways to bind properties! -->
-<h4 [class.special]="isSpecial">This class binding is special</h4>
-<h4 [ngClass]="currentClasses">This Div is initially special and savable</h4>
+<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
+  font Size depends on isSpecial
+</div>
+
+<div [ngStyle]="currentStyles">
+  this div is initially saveable and speical
+</div>
