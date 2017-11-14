@@ -8,11 +8,11 @@ import { DataService } from '../../services/data.service';
 })
 
 export class SandboxComponent {
-  data: any[] = [];
+  users: any[] = [];
 
   constructor(public dataService: DataService) {
-    this.dataService.getData().subscribe(data => {
-      this.data.push(data);
+    this.dataService.getUsers().subscribe(users => {
+      this.users = users;
     });
   }
 }

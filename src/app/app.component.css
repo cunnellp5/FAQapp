@@ -1,12 +1,21 @@
-h1 {
-    text-decoration: underline;
+html, body {
+  height: 100%;
+  margin: 0;
 }
+
+h1 {
+  text-decoration: underline;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
 .footer {
-  position: absolute;
-  bottom: 0;
   display: flex;
   flex-direction: row;
 }
+
 .footer h2 {
   padding-left: 1em;
 }
