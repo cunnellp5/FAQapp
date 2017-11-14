@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'sandbox',
@@ -7,17 +8,11 @@ import { Component } from '@angular/core';
 })
 
 export class SandboxComponent {
-  user: = {
-    name: '',
-    email: '',
-    phone: ''
-  }
+  users: string[];
 
-  onSubmit({value, valid}) {
-    if (valid) {
-      console.log(value);
-    } else  {
-      console.log('form is invalid')
-    }
+
+  constructor(public dataService: DataService) {
+    this.users = this.dataService.getUsers();
+    console.log(this.dataService.getUsers())
   }
 }
