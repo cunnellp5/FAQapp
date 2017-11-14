@@ -2,7 +2,7 @@
 <!-- ngmodule! -->
 <div class="container">
 
-  <form (submit)="onSubmit()">
+  <form (submit)="onSubmit(isEdit)">
     <div class="form-group">
       <label>Name</label>
       <input
@@ -42,9 +42,14 @@
         <li class="list-group-item">phone: {{ user.phone }}</li>
       </ul>
       <button
+        (click)="onEditClick(user)"
+        class="btn btn-primary btn-sm">
+        Edit
+      </button>
+      <button
         (click)="onDeleteClick(user.id)"
         class="btn btn-danger btn-sm">
-        Delete above
+        Delete
       </button>
       <br><br>
     </div>
