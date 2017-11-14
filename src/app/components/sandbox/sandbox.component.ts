@@ -23,8 +23,17 @@ export class SandboxComponent {
 
   onSubmit() {
     this.dataService.addUser(this.user).subscribe(user => {
-      console.log(user);
       this.users.unshift(user);
+    });
+  }
+
+  onDeleteClick(id) {
+    this.dataService.deleteUser(id).subscribe(res => {
+      for (let i = 0; i < this.users.length; i++) {
+        if (this.users[i].id === id) {
+          this.users.splice(i, 1);
+        }
+      }
     });
   }
 }

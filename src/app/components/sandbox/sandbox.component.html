@@ -41,7 +41,12 @@
         <li class="list-group-item">Email: {{ user.email }}</li>
         <li class="list-group-item">phone: {{ user.phone }}</li>
       </ul>
-      <br>
+      <button
+        (click)="onDeleteClick(user.id)"
+        class="btn btn-danger btn-sm">
+        Delete above
+      </button>
+      <br><br>
     </div>
   </div>
 
