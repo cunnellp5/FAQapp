@@ -5,7 +5,14 @@
       <a
       href="#"
       class="btn btn-link"
-      (click)="question.hide = !question.hide">Show</a>
+      (click)="question.hide = !question.hide"
+      >Show</a>
+      |
+      <a
+      href="#"
+      class="btn btn-link"
+      (click)="removeQuestion(question)"
+      >Remove</a>
     </div>
     <div
       class="card-block"
