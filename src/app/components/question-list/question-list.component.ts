@@ -1,4 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { DataService } from '../../services/data.service';
+
+import { Question } from '../../models/Question';
 
 @Component({
   selector: 'app-question-list',
@@ -7,26 +10,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class QuestionListComponent implements OnInit {
-  questions: Object[];
+  questions: Question[];
 
-  constructor() {
-    this.questions = [
-      {
-        text: "What is your name?",
-        answer: "My name is Mr. Flippy Nips"
-      },
-      {
-        text: "What is your favorite color?",
-        answer: "Blue"
-      },
-      {
-        text: "Which is faster, an african swallow or European swallow?",
-        answer: "well that depends..."
-      }
-    ];
+  constructor(public dataService: DataService) {
   }
 
   ngOnInit() {
+    this.questions = this.dataService.getQuestions();
   }
 
 }

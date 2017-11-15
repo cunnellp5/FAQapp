@@ -6,28 +6,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { SandboxComponent } from './components/sandbox/sandbox.component';
-import { DataService } from './services/data.service';
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
+import { DataService } from './services/data.service';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'user/:id', component: UserDetailsComponent },
+  // { path: '', component: HomeComponent },
+  // { path: 'about', component: AboutComponent },
+  // { path: 'user/:id', component: UserDetailsComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    SandboxComponent,
-    HomeComponent,
-    AboutComponent,
     NavbarComponent,
-    UserDetailsComponent,
     QuestionListComponent
   ],
   imports: [

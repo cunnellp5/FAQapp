@@ -1,33 +1,32 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
-
+import { Question } from '../models/Question';
 
 @Injectable()
 export class DataService {
+  questions: Question[];
 
-  constructor(public http: Http) {
-
+  constructor() {
+    this.questions = [
+      {
+        text: "What is your name?",
+        answer: "My name is Mr. Flippy Nips",
+        hide: true
+      },
+      {
+        text: "What is your favorite color?",
+        answer: "Blue",
+        hide: true
+      },
+      {
+        text: "Which is faster, an african swallow or European swallow?",
+        answer: "well that depends...",
+        hide: true
+      }
+    ];
   }
 
-  getUsers() {
-    return this.http.get('http://jsonplaceholder.typicode.com/users')
-      .map(res => res.json());
+  getQuestions() {
+    return this.questions;
   }
 
-  addUser(user) {
-    return this.http.post('http://jsonplaceholder.typicode.com/users', user)
-      .map(res => res.json());
-  }
-
-  deleteUser(id) {
-    return this.http.delete(`http://jsonplaceholder.typicode.com/users/${id}`)
-      .map(res => res.json());
-  }
-
-  updateUser(user) {
-    return this.http.put(`http://jsonplaceholder.typicode.com/users/${user.id}`, user)
-      .map(res => res.json())
-  }
 }
-// create observable and send data to component in a 'stream'
