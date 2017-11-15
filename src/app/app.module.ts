@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { QuestionListComponent } from './components/question-list/question-list.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     NavbarComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,
