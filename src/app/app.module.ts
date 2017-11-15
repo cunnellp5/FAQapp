@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 import { DataService } from './services/data.service';
+import { QuestionComponent } from './components/question/question.component';
 
 const appRoutes: Routes = [
   // { path: '', component: HomeComponent },
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
-    QuestionListComponent
+    QuestionListComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
